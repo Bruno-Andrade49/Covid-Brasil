@@ -8,13 +8,13 @@ const _elements = {
     selectSearchBox: document.querySelector(".state-select-list__search"),
     selectStateSelected: document.querySelector(".state-select-toggle__state-selected"),
     confirmed: document.querySelector(".info__total--confirmed"),
+    confirmed2: document.querySelector(".info__total--confirmed-2"),
     deaths: document.querySelector(".info__total--deaths"),
+    deaths2: document.querySelector(".info__total--deaths-2"),
     deathsDescription: document.querySelector(".data-box__description"),
     vaccinated1: document.querySelector(".info__total--vaccinated-1"),
     vaccinated2: document.querySelector(".info__total--vaccinated-2"),
-    vaccinated3: document.querySelector(".info__total--vaccinated-3"),
-    confirmed2: document.querySelector(".info__total--confirmed-2"),
-    deaths2: document.querySelector(".info__total--deaths-2")
+    vaccinated3: document.querySelector(".info__total--vaccinated-3")
 };
 
 const _data = {
@@ -57,6 +57,7 @@ _elements.stateSelectToggle.addEventListener("click", () => {
 });
 
 _elements.selectOptions.forEach((item) => {
+
     item.addEventListener("click", () => {
         _elements.selectStateSelected.innerText = item.innerText;
         _data.id = item.getAttribute("data-id");
