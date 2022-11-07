@@ -236,7 +236,7 @@ const updateCharts = () => {
         type: "doughnut",
         data: {
             labels: [
-                "Vacinadas", "Não vacinadas"
+                " (%) Vacinados", "(%) Não vacinados"
             ],
             datasets: [
                 {
@@ -275,7 +275,7 @@ const updateCharts = () => {
         type: "pie",
         data: {
             labels: [
-                "Vacinadas", "Não vacinadas"
+                "(%) Vacinadas", "(%) Não vacinadas"
             ],
             datasets: [
                 {
