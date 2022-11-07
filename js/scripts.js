@@ -240,7 +240,7 @@ const updateCharts = () => {
             datasets: [
                 {
                     label: "DADOS COVID-19",
-                    data: [(_graficodonnuts.total_pct_5_anos_ou_mais_dose_1*100), ((_graficodonnuts.total_pct_5_anos_ou_mais_dose_1-1)*100)],
+                    data: [(_graficodonnuts.total_pct_5_anos_ou_mais_dose_1*100), Math.abs((_graficodonnuts.total_pct_5_anos_ou_mais_dose_1-1)*100)],
                     backgroundColor: [
                         "rgba(255, 99, 132, 0.2)",
                         "rgba(54, 162, 235, 0.2)",
@@ -279,7 +279,7 @@ const updateCharts = () => {
             datasets: [
                 {
                     label: "DADOS COVID-19",
-                    data: [(_graficodonnuts.total_pct_5_anos_ou_mais_dose_2*100), ((_graficodonnuts.total_pct_5_anos_ou_mais_dose_2-1)*100)],
+                    data: [(_graficodonnuts.total_pct_5_anos_ou_mais_dose_2*100), Math.abs((_graficodonnuts.total_pct_5_anos_ou_mais_dose_2-1)*100)],
                     backgroundColor: [
                         "rgba(255, 99, 132, 0.2)",
                         "rgba(54, 162, 235, 0.2)",

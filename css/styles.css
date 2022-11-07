@@ -23,7 +23,7 @@
 [data-theme="light"] {
 	--clr-background:#F5F5F5;
 	--clr-font:#111111;
-    --clr-card:#faedb1;
+    --clr-card:#8dc8b6;
     --clr-switch-track:#AABBCC;
     --clr-link:#3333FF;
 
@@ -43,7 +43,7 @@
 
 [data-theme="dark"] {
 	--clr-background:#111111;
-	--clr-font:#F5F5F5;
+	--clr-font:#f9f9f9;
     --clr-card:#1A1A1A;
     --clr-switch-track:#AABBCC;
     --clr-link:#C2C2FF;
