@@ -38,6 +38,8 @@ const _graficodonnuts = {
 
 const _charts = {};
 
+//Lógica do modo Dark e Ligth.
+
 _elements.switch.addEventListener("click", () => {
     const isDark = _elements.switch.classList.toggle("switch__track--dark");
 
@@ -48,6 +50,8 @@ _elements.switch.addEventListener("click", () => {
     }
 });
 
+//Rotaciona seta do select-list.
+
 _elements.stateSelectToggle.addEventListener("click", () => {
     _elements.selectToggleIcon.classList.toggle(
         "state-select-toggle__icon--rotate"
@@ -55,6 +59,8 @@ _elements.stateSelectToggle.addEventListener("click", () => {
 
     _elements.selectList.classList.toggle("state-select-list--show");
 });
+
+//Recarrega a pagina com a nova uf=(estado ou Brasil)
 
 _elements.selectOptions.forEach((item) => {
 
@@ -66,6 +72,8 @@ _elements.selectOptions.forEach((item) => {
         loadData(_data.id);
     });
 });
+
+// Mêcanica de filtro baseado no que você digita.
 
 _elements.selectSearchBox.addEventListener("keyup", (e) => {
     const pesquisa = e.target.value.toLowerCase();
@@ -81,6 +89,8 @@ _elements.selectSearchBox.addEventListener("keyup", (e) => {
     }
 });
 
+// Faz as requisições.
+
 const request = async (api, id) => {
     try {
         const url = api + id;
@@ -93,6 +103,8 @@ const request = async (api, id) => {
         console.log(erro);
     }
 };
+
+//Recarrega a pagina atualizando rotas e funções.
 
 const loadData = async (id) => {
     _elements.loading.classList.remove("loading--hide");
@@ -111,7 +123,7 @@ const loadData = async (id) => {
     updateCharts();
 };
 
-loadData(_data.id);
+//Manda informações para o objeto _grafico01 que repassa para o gráfico.
 
 const createGrafico01 = (id) => {
 
@@ -136,6 +148,8 @@ const createGrafico01 = (id) => {
     }
 
 };
+
+//Adiciona os valores nos cards.
 
 const updateCards = () => {
     const uf = _ufs[_data.id];
